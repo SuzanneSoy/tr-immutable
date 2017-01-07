@@ -1,8 +1,12 @@
 #lang info
 (define collection "tr-immutable")
 (define deps '("base"
-               "rackunit-lib"))
-(define build-deps '("scribble-lib" "racket-doc"))
+               "rackunit-lib"
+               "typed-racket-lib"
+               "typed-racket-more"))
+(define build-deps '("scribble-lib"
+                     "racket-doc"
+                     "typed-racket-doc"))
 (define scribblings '(("scribblings/tr-immutable.scrbl" ())))
 (define pkg-desc "Description Here")
 (define version "0.0")
