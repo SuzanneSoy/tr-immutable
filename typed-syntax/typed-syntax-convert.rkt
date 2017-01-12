@@ -21,8 +21,9 @@
                                  (Syntaxof Any)
                                  (Syntaxof A)))]
                       ;; Backported from 6.8 so that it works on 6.7
-                      [[vector->list vectortop->list]
-                       (→ VectorTop (Listof Any))])
+                      [vector->list
+                       (∀ (A) (case→ (→ (Vectorof A) (Listof A))
+                                     (→ VectorTop (Listof Any))))])
 
 (define-syntax-rule (unsafe-cast v t)
   ((inst unsafe-cast-function t) v))
@@ -94,8 +95,7 @@
                       [else
                        (values (cons car* cdr*) 'modified)]))]
     [(vector? e)  (match-let ([(cons vs* status)
-                               (try-listof-any->isexp* (vectortop->list e)
-                                                       non-sexp)])
+                               (try-listof-any->isexp* (vector->list e) non-sexp)])
                     (case status
                       [(unmodified)
                        (if (immutable? e)

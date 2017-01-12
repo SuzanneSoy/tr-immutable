@@ -4,14 +4,6 @@
          typed/racket/unsafe
          "typed-prefab-declarations.rkt")
 
-(unsafe-require/typed racket/base
-                      [[datum->syntax datum->syntax*]
-                       (∀ (A) (→ (Syntaxof Any)
-                                 A
-                                 (Syntaxof Any)
-                                 (Syntaxof Any)
-                                 (Syntaxof A)))])
-
 (provide ISyntaxOf
          ISyntaxOf-E
          ISyntax
@@ -26,6 +18,18 @@
          try-any->isyntax-e
          isyntax?
          isyntax-e?)
+
+(unsafe-require/typed racket/base
+                      [[datum->syntax datum->syntax*]
+                       (∀ (A) (→ (Syntaxof Any)
+                                 A
+                                 (Syntaxof Any)
+                                 (Syntaxof Any)
+                                 (Syntaxof A)))]
+                      ;; Backported from 6.8 so that it works on 6.7
+                      [vector->list
+                       (∀ (A) (case→ (→ (Vectorof A) (Listof A))
+                                     (→ VectorTop (Listof Any))))])
 
 (unsafe-require/typed racket/function
                       [[identity unsafe-cast-function] (∀ (A) (→ Any A))])
