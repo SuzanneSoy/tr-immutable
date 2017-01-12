@@ -10,6 +10,7 @@
          ISyntax-E
          ISyntax/Non
          ISyntax/Non-E
+         ISyntax/Non-Stx
          any->isyntax/non
          syntax->isyntax/non
          any->isyntax/non-e
@@ -72,6 +73,7 @@
 
 (define-type ISyntax/Non (ISyntaxOf (NonSyntaxOf Any) (NonSexpOf Any)))
 (define-type ISyntax/Non-E (ISyntaxOf-E (NonSyntaxOf Any) (NonSexpOf Any)))
+(define-type ISyntax/Non-Stx (Syntaxof ISyntax/Non-E))
 
 (define-type ISyntax (ISyntaxOf Nothing Nothing))
 (define-type ISyntax-E (ISyntaxOf-E Nothing Nothing))

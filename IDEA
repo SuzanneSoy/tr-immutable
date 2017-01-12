@@ -1,0 +1,2 @@
+IDEA: to reduce the problem of "fake" immutable vectors etc. leaking out into the generated code, also change the representation of syntax objects. That way, errors will be caught really fast if anythin leaks.
+      Though this could also cause errors of its own in other places :-(

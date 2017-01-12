@@ -13,6 +13,7 @@
          ISyntaxOf-E
          ISyntax/Non
          ISyntax/Non-E
+         ISyntax/Non-Stx
          any->isyntax/non
          syntax->isyntax/non
          any->isyntax/non-e
