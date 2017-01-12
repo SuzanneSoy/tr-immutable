@@ -19,7 +19,11 @@
                                  A
                                  (Syntaxof Any)
                                  (Syntaxof Any)
-                                 (Syntaxof A)))])
+                                 (Syntaxof A)))]
+                      ;; Backported from 6.8 so that it works on 6.7
+                      [vector->list
+                       (∀ (A) (case→ (→ (Vectorof A) (Listof A))
+                                     (→ VectorTop (Listof Any))))])
 
 (define-syntax-rule (unsafe-cast v t)
   ((inst unsafe-cast-function t) v))
