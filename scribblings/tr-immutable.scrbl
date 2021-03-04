@@ -3,7 +3,7 @@
                     typed/racket/base]]
 
 @title{tr-immutable}
-@author{georges}
+@author[@author+email["Suzanne Soy" "racket@suzanne.soy"]]
 
 @defmodule[tr-immutable]
 
