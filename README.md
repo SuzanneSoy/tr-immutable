@@ -1,4 +1,4 @@
-[![Build Status,](https://img.shields.io/travis/jsmaniac/tr-immutable/master.svg)](https://travis-ci.org/jsmaniac/tr-immutable)
+[![Build Status,](https://img.shields.io/travis/jsmaniac/tr-immutable/main.svg)](https://travis-ci.org/jsmaniac/tr-immutable)
 [![Coverage Status,](https://img.shields.io/codecov/c/github/jsmaniac/tr-immutable/main.svg)](https://codecov.io/gh/jsmaniac/tr-immutable/branch/main)
 [![Build Stats,](https://img.shields.io/badge/build-stats-blue.svg)](http://jsmaniac.github.io/travis-stats/#jsmaniac/tr-immutable)
 [![Online Documentation.](https://img.shields.io/badge/docs-online-blue.svg)](http://docs.racket-lang.org/tr-immutable/)
